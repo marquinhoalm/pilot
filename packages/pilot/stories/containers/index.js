@@ -38,8 +38,13 @@ import WithdrawForm from './Withdraw/Form'
 import WithdrawResultSuccess from './Withdraw/Result/Success'
 import WithdrawResultError from './Withdraw/Result/Error'
 import WithdrawSummary from './Withdraw/Summary'
+import MaskExample from './MaskTest'
 
 storiesOf('Containers', module)
+
+  .add('Mask test', () => (
+    <MaskExample />
+  ))
   .add('Recipient list', () => (
     <RecipientListState />
   ))
