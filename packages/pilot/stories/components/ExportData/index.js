@@ -1,9 +1,9 @@
 import React from 'react'
-import { action } from '@storybook/addon-actions'
+
+import DownloadIcon from 'emblematic-icons/svg/Download32.svg'
 
 import Section from '../../Section'
 import ExportData from '../../../src/components/ExportData'
-import DownloadIcon from 'emblematic-icons/svg/Download32.svg'
 
 const ExportDataExample = () => (
   <Section>
@@ -11,9 +11,9 @@ const ExportDataExample = () => (
       icon={<DownloadIcon width={16} height={16} />}
       exportOptions={[
         { title: 'CSV', mime: '.csv' },
-        { title: 'Excel', mime: '.xlsx' }
+        { title: 'Excel', mime: '.xlsx' },
       ]}
-      onExport={(mimeType) => undefined}
+      onExport={() => undefined}
       subTitle="Export to"
       titlte="Export"
     />
