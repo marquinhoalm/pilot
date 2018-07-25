@@ -14,7 +14,7 @@ const ExportDataExample = () => (
         { title: 'Excel', mime: '.xlsx' },
       ]}
       onExport={() => undefined}
-      subTitle="Export to"
+      subtitle="Export to"
       titlte="Export"
     />
   </Section>

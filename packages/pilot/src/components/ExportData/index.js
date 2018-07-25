@@ -12,14 +12,14 @@ const ExportData = ({
   icon,
   exportOptions,
   onExport,
-  subTitle,
+  subtitle,
   title,
 }) => (
   <Popover
     content={
       <div className={style.exportPopover}>
         <PopoverContent>
-          <strong>{subTitle}</strong>
+          <strong>{subtitle}</strong>
         </PopoverContent>
         <PopoverMenu items={exportOptions} />
       </div>
@@ -42,10 +42,10 @@ ExportData.propTypes = {
   icon: PropTypes.node.isRequired,
   exportOptions: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    mine: PropTypes.string.isRequired,
+    mime: PropTypes.string.isRequired,
   }).isRequired,
   onExport: PropTypes.func.isRequired,
-  subTitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }
 
