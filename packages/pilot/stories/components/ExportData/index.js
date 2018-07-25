@@ -10,8 +10,9 @@ const ExportDataExample = () => (
     <ExportData
       icon={<DownloadIcon width={16} height={16} />}
       exportOptions={[
-        { title: 'CSV', mime: '.csv' },
-        { title: 'Excel', mime: '.xlsx' },
+        { title: 'CSV', mime: 'text/csv' },
+        { title: 'Excel', mime: 'application/vnd.ms-excel' },
+        { title: 'PDF', mime: 'application/pdf' },
       ]}
       onExport={() => undefined}
       subtitle="Export to"
