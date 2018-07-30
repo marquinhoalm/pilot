@@ -53,8 +53,12 @@ import {
   AnticipationResultWithoutAutomaticTransfer,
 } from './Anticipation/Result'
 import Anticipation from './Anticipation'
+import ConfigurationStep from './AddRecipient/ConfigurationsStep'
 
 storiesOf('Containers', module)
+  .add('ConfigurationStep', () => (
+    <ConfigurationStep />
+  ))
   .add('Anticipation Form', () => (
     <AnticipationForm />
   ))
