@@ -754,6 +754,13 @@
                 "siteUrl": "Site Url"
               }
             },
+            "bank": {
+              "account_name": "Nome da conta",
+              "name": "Banco",
+              "agency": "Agência",
+              "account": "Conta",
+              "account_type": "Tipo de conta"
+            },
             "address": {
               "form": {
                 "street": "Rua",
