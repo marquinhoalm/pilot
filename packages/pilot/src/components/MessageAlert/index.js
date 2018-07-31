@@ -54,12 +54,11 @@ MessageAlert.propTypes = {
     'high', 'normal', 'low',
   ]),
   message: PropTypes.element.isRequired,
-  onActionClick: PropTypes.func,
+  onActionClick: PropTypes.func.isRequired,
 }
 
 MessageAlert.defaultProps = {
   relevance: 'normal',
-  onActionClick: () => {},
 }
 
 export default MessageAlert
