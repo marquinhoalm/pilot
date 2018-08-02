@@ -1,0 +1,324 @@
+:root {
+  --animation-duration: 5.4s;
+  --size: 15px;
+  --margin: 5px;
+  --color: #000000;
+  --next: 20px;
+  --loader-size: calc(calc(var(--size) * 3) + calc(var(--margin) * 2));
+  --background-color: rgba(255, 255, 255, 0.8);
+  --base-color: rgba(23, 201, 178, 1);
+  --transparent: rgba(23, 201, 178, 0);
+  --last-item-color: rgba(132, 89, 185, 1);
+  --last-item-transparent: rgba(132, 89, 185, 0);
+}
+
+.loader {
+  height: var(--loader-size);
+  position: relative;
+  width: var(--loader-size);
+  z-index: 2;
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    content: "";
+    box-shadow:
+      var(--next) 0 0 var(--transparent),
+      calc(var(--next) * 2) 0 0 var(--transparent),
+      0 calc(0 - var(--next)) 0 var(--transparent),
+      var(--next) calc(0 - var(--next)) 0 var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next)) 0 var(--transparent),
+      0 calc(0 - calc(var(--next) * 2)) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+    animation: loader var(--animation-duration) linear forwards infinite;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--base-color);
+    opacity: 0;
+    content: "";
+    animation: base var(--animation-duration) linear forwards infinite;
+  }
+}
+
+@keyframes base {
+
+  0% {
+    bottom: 10px;
+    opacity: 0;
+  }
+
+  5%,
+  50% {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  55%,
+  100% {
+    bottom: -10px;
+    opacity: 0;
+  }
+}
+
+@keyframes loader {
+
+  0% {
+    box-shadow:
+      var(--next) -10px var(--transparent),
+      calc(var(--next) * 2) 0 var(--transparent),
+      0 calc(0 - var(--next)) var(--transparent),
+      var(--next) calc(0 - var(--next)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2)) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+  }
+
+  5% {
+    box-shadow:
+      var(--next) -10px var(--transparent),
+      calc(var(--next) * 2) 0 var(--transparent),
+      0 calc(0 - var(--next)) var(--transparent),
+      var(--next) calc(0 - var(--next)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2)) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+  }
+
+  10% {
+    box-shadow:
+      var(--next) 0 var(--base-color),
+      calc(var(--next) * 2) -10px var(--transparent),
+      0 calc(0 - var(--next)) var(--transparent),
+      var(--next) calc(0 - var(--next)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2)) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+  }
+
+  15% {
+    box-shadow:
+      var(--next) 0 var(--base-color),
+      calc(var(--next) * 2) 0  var(--base-color),
+      0 calc(0 - var(--next) - 10px) var(--transparent),
+      var(--next) calc(0 - var(--next)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2)) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+  }
+
+  20% {
+    box-shadow:
+      var(--next) 0 var(--base-color),
+      calc(var(--next) * 2) 0 var(--base-color),
+      0 calc(0 - var(--next)) var(--base-color),
+      var(--next) calc(0 - var(--next) - 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2)) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+  }
+
+  25% {
+    box-shadow:
+      var(--next) 0 var(--base-color),
+      calc(var(--next) * 2) 0 var(--base-color),
+      0 calc(0 - var(--next)) var(--base-color),
+      var(--next) calc(0 - var(--next)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - var(--next) - 10px) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2)) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+  }
+
+  30% {
+    box-shadow:
+      var(--next) 0 var(--base-color),
+      calc(var(--next) * 2) 0 var(--base-color),
+      0 calc(0 - var(--next)) var(--base-color),
+      var(--next) calc(0 - var(--next)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--base-color),
+      0 calc(0 - calc(var(--next) * 2) - 10px) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+  }
+
+  35% {
+    box-shadow:
+      var(--next) 0 var(--base-color),
+      calc(var(--next) * 2) 0 var(--base-color),
+      0 calc(0 - var(--next)) var(--base-color),
+      var(--next) calc(0 - var(--next)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--base-color),
+      0 calc(0 - calc(var(--next) * 2)) var(--base-color),
+      var(--next) calc(0 - calc(var(--next) * 2) - 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-transparent);
+  }
+
+  40% {
+    box-shadow:
+      var(--next) 0 var(--base-color),
+      calc(var(--next) * 2) 0 var(--base-color),
+      0 calc(0 - var(--next)) var(--base-color),
+      var(--next) calc(0 - var(--next)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--base-color),
+      0 calc(0 - calc(var(--next) * 2)) var(--base-color),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2) - 10px) var(--last-item-transparent);
+  }
+
+  45%,
+  55% {
+    box-shadow:
+      var(--next) 0 var(--base-color),
+      calc(var(--next) * 2) 0 var(--base-color),
+      0 calc(0 - var(--next)) var(--base-color),
+      var(--next) calc(0 - var(--next)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--base-color),
+      0 calc(0 - calc(var(--next) * 2)) var(--base-color),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-color);
+  }
+
+  60% {
+    box-shadow:
+      var(--next) 10px var(--transparent),
+      calc(var(--next) * 2) 0 var(--base-color),
+      0 calc(0 - var(--next)) var(--base-color),
+      var(--next) calc(0 - var(--next)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--base-color),
+      0 calc(0 - calc(var(--next) * 2)) var(--base-color),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-color);
+  }
+
+  65% {
+    box-shadow:
+      var(--next) 10px var(--transparent),
+      calc(var(--next) * 2) 10px var(--transparent),
+      0 calc(0 - var(--next)) var(--base-color),
+      var(--next) calc(0 - var(--next)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--base-color),
+      0 calc(0 - calc(var(--next) * 2)) var(--base-color),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-color);
+  }
+
+  70% {
+    box-shadow:
+      var(--next) 10px var(--transparent),
+      calc(var(--next) * 2) 10px var(--transparent),
+      0 calc(0 - var(--next) + 10px) var(--transparent),
+      var(--next) calc(0 - var(--next)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--base-color),
+      0 calc(0 - calc(var(--next) * 2)) var(--base-color),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-color);
+  }
+
+  75% {
+    box-shadow:
+      var(--next) 10px var(--transparent),
+      calc(var(--next) * 2) 10px var(--transparent),
+      0 calc(0 - var(--next) + 10px) var(--transparent),
+      var(--next) calc(0 - var(--next) + 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next)) var(--base-color),
+      0 calc(0 - calc(var(--next) * 2)) var(--base-color),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-color);
+  }
+
+  80% {
+    box-shadow:
+      var(--next) 10px var(--transparent),
+      calc(var(--next) * 2) 10px var(--transparent),
+      0 calc(0 - var(--next) + 10px) var(--transparent),
+      var(--next) calc(0 - var(--next) + 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next) + 10px) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2)) var(--base-color),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-color);
+  }
+
+  85% {
+    box-shadow:
+      var(--next) 10px var(--transparent),
+      calc(var(--next) * 2) 10px var(--transparent),
+      0 calc(0 - var(--next) + 10px) var(--transparent),
+      var(--next) calc(0 - var(--next) + 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next) + 10px) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2) + 10px) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2)) var(--base-color),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-color);
+  }
+
+  90% {
+    box-shadow:
+      var(--next) 10px var(--transparent),
+      calc(var(--next) * 2) 10px var(--transparent),
+      0 calc(0 - var(--next) + 10px) var(--transparent),
+      var(--next) calc(0 - var(--next) + 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next) + 10px) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2) + 10px) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2) + 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2)) var(--last-item-color);
+  }
+
+  95%,
+  100% {
+    box-shadow:
+      var(--next) 10px var(--transparent),
+      calc(var(--next) * 2) 10px var(--transparent),
+      0 calc(0 - var(--next) + 10px) var(--transparent),
+      var(--next) calc(0 - var(--next) + 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - var(--next) + 10px) var(--transparent),
+      0 calc(0 - calc(var(--next) * 2) + 10px) var(--transparent),
+      var(--next) calc(0 - calc(var(--next) * 2) + 10px) var(--transparent),
+      calc(var(--next) * 2) calc(0 - calc(var(--next) * 2) + 10px) var(--last-item-transparent);
+  }
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.overlay {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+}
+
+.loaderOverlay {
+  background-color: var(--background-color);
+}
+
+.highZIndex {
+  z-index: 10;
+}
