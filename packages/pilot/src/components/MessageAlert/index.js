@@ -9,7 +9,7 @@ import {
 } from 'former-kit'
 
 const MessageAlert = ({
-  actionCall,
+  actionText,
   icon,
   relevance,
   message,
@@ -39,7 +39,7 @@ const MessageAlert = ({
           relevance={relevance}
           onClick={onActionClick}
         >
-          {actionCall}
+          {actionText}
         </Button>
       </Col>
     </Row>
@@ -47,14 +47,14 @@ const MessageAlert = ({
 )
 
 MessageAlert.propTypes = {
-  actionCall: PropTypes.string.isRequired,
+  actionText: PropTypes.string.isRequired,
   icon: PropTypes.element.isRequired,
-  title: PropTypes.element.isRequired,
   relevance: PropTypes.oneOf([
-    'high', 'normal', 'low',
+    'high', 'low', 'normal',
   ]),
   message: PropTypes.element.isRequired,
   onActionClick: PropTypes.func.isRequired,
+  title: PropTypes.element.isRequired,
 }
 
 MessageAlert.defaultProps = {
