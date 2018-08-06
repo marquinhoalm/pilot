@@ -1,0 +1,30 @@
+@import "former-kit-skin-pagarme/dist/styles/spacing.css";
+
+.title {
+  color: #858c8f;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #858c8f;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+.infoTitle {
+  color: #858c8f;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+.info {
+  color: #858c8f;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 0px;
+}
