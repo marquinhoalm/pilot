@@ -12,6 +12,7 @@ const ExportData = ({
   exportOptions,
   icon,
   onExport,
+  placement,
   subtitle,
   title,
 }) => (
@@ -24,7 +25,7 @@ const ExportData = ({
         <PopoverMenu items={exportOptions} />
       </div>
     }
-    placement="bottomEnd"
+    placement={placement}
   >
     <Button
       fill="outline"
@@ -45,6 +46,7 @@ ExportData.propTypes = {
   }).isRequired,
   icon: PropTypes.node.isRequired,
   onExport: PropTypes.func.isRequired,
+  placement: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }

@@ -6,7 +6,6 @@
   font-size: var(--caption-font-size);
 
   & strong {
-    font-weight: bold;
     text-align: center;
   }
 }

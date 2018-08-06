@@ -15,6 +15,7 @@ const ExportDataExample = () => (
       ]}
       icon={<DownloadIcon width={16} height={16} />}
       onExport={() => action('export')}
+      placement="bottomEnd"
       subtitle="Export to"
       titlte="Export"
     />
