@@ -88,7 +88,6 @@ const ReportCardState = () => (
         actions={renderActions('ready')}
         filterLabel="Filtros"
         status="ready"
-        statusLabel="Status"
         subtitle="Período: 01/01/2017 a 01/06/2017   |   Criado em 10/05/2018"
         t={t => t}
         title="Carta de circularização 2017"
@@ -97,7 +96,6 @@ const ReportCardState = () => (
         actions={renderActions('canceled')}
         filterLabel="Filtros"
         status="canceled"
-        statusLabel="Status"
         subtitle="Período: 01/01/2017 a 01/06/2017   |   Criado em 10/05/2018"
         t={t => t}
         title="Carta de circularização 2017"
@@ -106,7 +104,6 @@ const ReportCardState = () => (
         actions={renderActions('processing')}
         filterLabel="Filtros"
         status="processing"
-        statusLabel="Status"
         subtitle="Período: 01/01/2017 a 01/06/2017   |   Criado em 10/05/2018"
         t={t => t}
         title="Carta de circularização 2017"

@@ -30,7 +30,6 @@ class ReportCard extends Component {
       actions,
       filterLabel,
       status,
-      statusLabel,
       subtitle,
       t,
       title,
@@ -57,7 +56,7 @@ class ReportCard extends Component {
           {!this.state.collapsed &&
             <CardContent className={style.reportDetails}>
               <span>{filterLabel}</span>
-              <span>{statusLabel}: {t(`models.report.status_of.${status}`)} </span>
+              <span>{t('pages.report.status')}: {t(`models.report.status_of.${status}`)} </span>
             </CardContent>
           }
         </CardSection>
@@ -70,7 +69,6 @@ ReportCard.propTypes = {
   actions: PropTypes.node.isRequired,
   filterLabel: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
-  statusLabel: PropTypes.string.isRequired,
   subtitle: PropTypes.node.isRequired,
   t: PropTypes.func.isRequired,
   title: PropTypes.node.isRequired,

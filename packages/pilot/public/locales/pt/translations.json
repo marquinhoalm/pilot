@@ -573,17 +573,15 @@
       "reports_number": "Nº de relatórios:",
       "title": "Relatórios", 
       "try_filter_again": "Tente novamente com outros filtros.",
-      "report": {
-        "created_at": "Criado em",
-        "export_to": "Exportar para",
-        "filters": "Filtros",
-        "id": "ID (ID do relatório)",
-        "status": "Status",
-        "type_files": {
-          "csv":"CSV",
-          "excel": "Excel",
-          "pdf":"PDF",
-        }
+      "created_at": "Criado em",
+      "export_to": "Exportar para",
+      "filters": "Filtros",
+      "id": "ID (ID do relatório)",
+      "status": "Status",
+      "type_files": {
+        "csv":"CSV",
+        "excel": "Excel",
+        "pdf":"PDF",
       }
     },
     "reprocess": {
