@@ -31,7 +31,7 @@ const items = [
 ]
 
 const renderActions = (report) => {
-  if (report.status === 'canceled') {
+  if (report === 'canceled') {
     return (
       <Fragment>
         <Button
