@@ -106,10 +106,6 @@ class ConfigurationsStep extends Component {
     const numberMessage = props.t('pages.recipients.number')
     const requiredMessage = props.t('pages.recipients.required')
 
-    this.anticipationModelOptions = anticipationModelOptions(props.t)
-    this.transferIntervalOptions = transferIntervalOptions(props.t)
-    this.transferWeekdayOptions = transferWeekdayOptions(props.t)
-
     this.number = createNumberValidation(numberMessage)
     this.required = createRequiredValidation(requiredMessage)
 
@@ -206,7 +202,7 @@ class ConfigurationsStep extends Component {
       disabled={!transferEnabled || disabledWeekday}
       label={t('pages.recipients.transfer_weekday')}
       name="transferWeekday"
-      options={this.transferWeekdayOptions}
+      options={transferWeekdayOptions(t)}
       key={transferWeekday}
     />)
   }
@@ -243,10 +239,10 @@ class ConfigurationsStep extends Component {
               <Col tv={12} desk={12} tablet={12} palm={12}>
                 <RadioGroup
                   name="anticipationModel"
-                  options={this.anticipationModelOptions}
+                  options={anticipationModelOptions(t)}
                 />
               </Col>
-              <Col tv={1} desk={1} tablet={4} palm={4}>
+              <Col tv={2} desk={2} tablet={4} palm={4}>
                 { this.renderAnticipationInput() }
               </Col>
             </Row>
@@ -266,10 +262,10 @@ class ConfigurationsStep extends Component {
                 <RadioGroup
                   disabled={!formData.transferEnabled}
                   name="transferInterval"
-                  options={this.transferIntervalOptions}
+                  options={transferIntervalOptions(t)}
                 />
               </Col>
-              <Col tv={1} desk={1} tablet={4} palm={4}>
+              <Col tv={2} desk={2} tablet={4} palm={4}>
                 { this.renderTransferInput() }
               </Col>
             </Row>
