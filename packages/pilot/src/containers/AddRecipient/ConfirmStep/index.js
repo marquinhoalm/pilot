@@ -15,6 +15,7 @@ const ConfirmStep = () => (
   <CardContent>
     <p className={styles.title}>Confirmação de Cadastro</p>
     <p className={styles.subtitle}>Confira abaixo se os dados do seu recebedor estão corretos</p>
+    <hr />
     <Grid>
       <Row>
         <Col>
@@ -54,6 +55,7 @@ const ConfirmStep = () => (
           <span className={styles.info}>(11) 1111-1111</span>
         </Col>
       </Row>
+      <hr />
       <Row>
         <Col>
         <span className={styles.title}>Dados dos Sócios</span>
@@ -82,6 +84,7 @@ const ConfirmStep = () => (
           <span className={styles.info}>guilherme@barroso.com.br</span>
         </Col>
       </Row>
+      <hr />
       <Row>
         <Col>
         <span className={styles.title}>Conta Bancária</span>
@@ -118,6 +121,7 @@ const ConfirmStep = () => (
           <span className={styles.info}>Conta Corrent Individual</span>
         </Col>
       </Row>
+      <hr />
       <Row>
         <Col>
         <span className={styles.title}>Configurações de Antecipação</span>
@@ -142,6 +146,7 @@ const ConfirmStep = () => (
           <span className={styles.info}>100%</span>
         </Col>
       </Row>
+      <hr />
       <Row>
         <Col>
         <span className={styles.title}>Configurações de Transferência</span>
@@ -173,6 +178,12 @@ const ConfirmStep = () => (
     </Grid>
   </CardContent>
   <CardActions>
+    <Button
+      type="button"
+      fill="outline"
+    >
+      Cancelar
+    </Button>
     <Button
       type="button"
       fill="outline"
